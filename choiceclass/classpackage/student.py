@@ -7,5 +7,7 @@ class student(object):
         self.password=password
         self.xuefei='no'
         self.banji='no'
+        self.shcool=''
+        self.classes=''
     def show(self):
         print("学生：",self.name,"学费:",self.xuefei,"班级：",self.banji)
