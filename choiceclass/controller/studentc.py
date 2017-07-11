@@ -55,8 +55,6 @@ def xuanzebanji():
             s.classes=classes
             s.banji=classroom
     studentdb.zhucestu(stus)
-
-
 if num=='1':
     '注册学生'
     name=input('请输入名字')

@@ -1,7 +1,7 @@
 __author__ = 'Mr.Bool'
 '''班级'''
 def classroom(object):
-    def __init__(self,classes,teacher,classno):
-        self.classes=classes
+    def __init__(self,classname,teacher,classes):
+        self.classname=classname
         self.teacher=teacher
-        self.classno=classno
+        self.classes=classnes
