@@ -1,7 +1,6 @@
 __author__ = 'Mr.Bool'
 from classpackage import school
 from classpackage import classes
-from classpackage import school
 from classpackage import student
 from classpackage import teacher
 from db import studentdb
@@ -13,18 +12,21 @@ schools=[]
 teachers=[]
 banjis=[]
 kechengs=[]
-school=''#学校
+sch=''#学校
 teacher=''#讲师
 banji=''#班级
 kecheng=''#课程
 '创建学校'
 def chuangjianxuexiao():
     schools=schooldb.duxuexiao()
-    for s in schools:
-        print('现有学校',s.place)
+    if len(schools)==0:
+        pass
+    else:
+        for s in schools:
+            print('现有学校',s.place)
     schoolname=input("请输入学校名字")
-    school=school(schoolname)
-    shools.append(school)
+    sch=school.school(schoolname)
+    schools.append(school)
     schooldb.chuangjianxuexiao(schools)
     pass
 '创建讲师'
@@ -69,24 +71,25 @@ def chuangjiankecheng():
     classesdb.xieclasses(banjis)
     pass
 
+'开始'
+def start():
+    print("1.创建学校")
+    print("2.创建讲师")
+    print("3.创建班级")
+    print("4.创建课程")
+    no=input("请输入你选择的功能")
 
-print("1.创建学校")
-print("2.创建讲师")
-print("3.创建班级")
-print("4.创建课程")
-no=input("请输入你选择的功能")
-
-if no.strip()=='1':
-    chuangjianxuexiao()
-    pass
-elif no.strip()=='2':
-    chuangjianjiangshi()
-    pass
-elif no.strip()=='3':
-    chuangjianbanji()
-    pass
-elif no.strip()=='4':
-    chuangjiankecheng()
-    pass
-else:
-    print("错误序号")
+    if no.strip()=='1':
+        chuangjianxuexiao()
+        pass
+    elif no.strip()=='2':
+        chuangjianjiangshi()
+        pass
+    elif no.strip()=='3':
+        chuangjianbanji()
+        pass
+    elif no.strip()=='4':
+        chuangjiankecheng()
+        pass
+    else:
+        print("错误序号")

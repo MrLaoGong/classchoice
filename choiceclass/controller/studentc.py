@@ -7,10 +7,6 @@ from db import classesdb
 from db import classroomdb
 stu=''
 stus=''
-print('1.注册')
-print('2.交学费')
-print("3.选择班级")
-num=input('请输入你的选择')
 def login(func):
     def test():
         name = input("请输入名字")
@@ -55,22 +51,27 @@ def xuanzebanji():
             s.classes=classes
             s.banji=classroom
     studentdb.zhucestu(stus)
-if num=='1':
-    '注册学生'
-    name=input('请输入名字')
-    password=input("请输入密码")
-    zhuce(name,password)
-    pass
-elif num=='2':
-    '交学费需要先登录'
-    jiaoxuefei()
-    pass
-elif num=='3':
-    "先登录选择学校课程班级"
-    xuanzebanji()
-    pass
-else:
-    print("错误的输入！")
+def start():
+    print('1.注册')
+    print('2.交学费')
+    print("3.选择班级")
+    num=input('请输入你的选择')
+    if num=='1':
+        '注册学生'
+        name=input('请输入名字')
+        password=input("请输入密码")
+        zhuce(name,password)
+        pass
+    elif num=='2':
+        '交学费需要先登录'
+        jiaoxuefei()
+        pass
+    elif num=='3':
+        "先登录选择学校课程班级"
+        xuanzebanji()
+        pass
+    else:
+        print("错误的输入！")
 
 
 

@@ -48,20 +48,20 @@ def xiugaichengji():
          if s.name==stuname:
             s.chengji=chengji
     studentdb.zhucestu(students)
-
-teachername=input("请输入您的名字")
-print("1.选择上课班级")
-print("2.查看班级成员")
-print("3.修改学生成绩")
-no=input("请输入你要选择的功能")
-if no.strip()==1:
-    xuanzebanji()
-    pass
-elif no.strip()==2:
-    chakanchengyuan()
-    pass
-elif no.strip()==3:
-    xiugaichengji()
-    pass
-else:
-    print("错误输入！")
+def start():
+    teachername=input("请输入您的名字")
+    print("1.选择上课班级")
+    print("2.查看班级成员")
+    print("3.修改学生成绩")
+    no=input("请输入你要选择的功能")
+    if no.strip()==1:
+        xuanzebanji()
+        pass
+    elif no.strip()==2:
+        chakanchengyuan()
+        pass
+    elif no.strip()==3:
+        xiugaichengji()
+        pass
+    else:
+        print("错误输入！")
